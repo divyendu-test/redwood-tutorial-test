@@ -7,9 +7,9 @@ import {
   Submit,
 } from '@redwoodjs/forms'
 
-const PostForm = (props) => {
+const ArticleForm = (props) => {
   const onSubmit = (data) => {
-    props.onSave(data, props?.post?.id)
+    props.onSave(data, props?.article?.id)
   }
 
   return (
@@ -31,7 +31,7 @@ const PostForm = (props) => {
         </Label>
         <TextField
           name="title"
-          defaultValue={props.post?.title}
+          defaultValue={props.article?.title}
           className="rw-input"
           errorClassName="rw-input rw-input-error"
           validation={{ required: true }}
@@ -47,7 +47,7 @@ const PostForm = (props) => {
         </Label>
         <TextField
           name="body"
-          defaultValue={props.post?.body}
+          defaultValue={props.article?.body}
           className="rw-input"
           errorClassName="rw-input rw-input-error"
           validation={{ required: true }}
@@ -64,4 +64,4 @@ const PostForm = (props) => {
   )
 }
 
-export default PostForm
+export default ArticleForm
